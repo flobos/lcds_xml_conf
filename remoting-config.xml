@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" 
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+	
+	<destination id="libreria.frm_matricula_adicional">
+		<properties>
+			<source>libreria.frm_matricula_adicional</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_informes_matriculas">
+        <properties>
+            <source>libreria.frm_informes_matriculas</source>
+        </properties>
+    </destination>
+	
+	<destination id="libreria.frm_informes_academicos">
+        <properties>
+            <source>libreria.frm_informes_academicos</source>
+        </properties>
+    </destination>
+	
+	<destination id="libreria.frm_registro_admision_pagos">
+        <properties>
+            <source>libreria.frm_registro_admision_pagos</source>
+        </properties>
+    </destination>
+
+	
+	<destination id="libreria.frm_fuc_gestion_asignaciones">
+        <properties>
+            <source>libreria.frm_fuc_gestion_asignaciones</source>
+        </properties>
+    </destination>
+	
+	<destination id="libreria.frm_biblioteca_material_movimiento">
+        <properties>
+            <source>libreria.frm_biblioteca_material_movimiento</source>
+        </properties>
+    </destination>
+
+<destination id="libreria.frm_foto_alumno">
+		<properties>
+			<source>libreria.frm_foto_alumno</source>
+		</properties>
+	</destination>
+	
+	<destination id="UploadImage-ro">
+		<properties>
+			<source>org.flex.flexpaint.UploadImage</source>
+		</properties>
+	</destination>
+	<destination id="libreria.frm_biblioteca_material_ingreso_coleccion">
+		<properties>
+			<source>libreria.frm_biblioteca_material_ingreso_coleccion</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_biblioteca_material_asigna_sedes">
+		<properties>
+			<source>libreria.frm_biblioteca_material_asigna_sedes</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_biblioteca_material_recepcion">
+		<properties>
+			<source>libreria.frm_biblioteca_material_recepcion</source>
+		</properties>
+	</destination>
+
+
+	<destination id="libreria.frm_biblioteca_material_devolucion">
+		<properties>
+			<source>libreria.frm_biblioteca_material_devolucion</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_biblioteca_material_bibiloteca">
+		<properties>
+			<source>libreria.frm_biblioteca_material_bibiloteca</source>
+		</properties>
+	</destination>
+
+  <destination id="libreria.frm_identificacion">
+    <properties>
+      <source>libreria.frm_identificacion</source>
+    </properties>
+  </destination>
+
+	<destination id="libreria.frm_maestro_entidades">
+		<properties>
+			<source>libreria.frm_maestro_entidades</source>
+		</properties>
+	</destination>	
+
+	<destination id="libreria.frm_despacho_nomina_despacho">
+		<properties>
+			<source>libreria.frm_despacho_nomina_despacho</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_menu_sub_entidad_funcion_modalidad">
+		<properties>
+			<source>libreria.frm_menu_sub_entidad_funcion_modalidad</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_main_frame">
+		<properties>
+			<source>libreria.frm_main_frame</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.EchoService">
+		<properties>
+			<source>libreria.EchoService</source>
+		</properties>
+	</destination>
+
+	<!-- Librerias Alumno Flex 3 -->
+	
+	<destination id="libreria_alum.frm_identificador">
+		<properties>
+			<source>libreria_alum.frm_identificador</source>
+		</properties>
+	</destination>
+	
+	<!-- Librerias Administrador - > Purebas Objetivas - >  Flex 3 -->
+	
+	<destination id="libreria.frm_objetivas_ingreso_preguntas">
+		<properties>
+			<source>libreria.frm_objetivas_ingreso_preguntas</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_objetivas_gestion_alumno">
+		<properties>
+			<source>libreria.frm_objetivas_gestion_alumno</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_objetivas_asigna_preguntas_ramo">
+		<properties>
+			<source>libreria.frm_objetivas_asigna_preguntas_ramo</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_objetivas_asigna_prueba_unidad">
+		<properties>
+			<source>libreria.frm_objetivas_asigna_prueba_unidad</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_objetivas_asigna_preguntas_prueba_unidad">
+		<properties>
+			<source>libreria.frm_objetivas_asigna_preguntas_prueba_unidad</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_objetivas_muestra_pruebas_rendidas">
+		<properties>
+			<source>libreria.frm_objetivas_muestra_pruebas_rendidas</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_info_busca_datos_alumno">
+		<properties>
+			<source>libreria.frm_info_busca_datos_alumno</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_fise_ingreso_datos">
+		<properties>
+			<source>libreria.frm_fise_ingreso_datos</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_adm_activacion_funcionarios">
+		<properties>
+			<source>libreria.frm_adm_activacion_funcionarios</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_conferencias_ingreso_conferencia">
+		<properties>
+			<source>libreria.frm_conferencias_ingreso_conferencia</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_conferencias_gestion_conferencias">
+		<properties>
+			<source>libreria.frm_conferencias_gestion_conferencias</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_conferencias_gestion_conferencias_tutor">
+		<properties>
+			<source>libreria.frm_conferencias_gestion_conferencias_tutor</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.prueba">
+		<properties>
+			<source>libreria.prueba</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.des_encripta">
+		<properties>
+			<source>libreria.des_encripta</source>
+		</properties>
+	</destination>
+	
+	
+<!-- Librerias - > Pruebas Objetivas - >  Flex 3 -->
+	
+	<destination id="libreria.frm_objetivas_prueba_alumno">
+		<properties>
+			<source>libreria.frm_objetivas_prueba_alumno</source>
+		</properties>
+	</destination>
+
+
+
+ 	<destination id="libreria.frm_reloj_control">
+		<properties>
+			<source>libreria.frm_reloj_control</source>
+		</properties>
+	</destination>
+
+<!-- Librerias - > Registro Admisi n - >  Flex 3 -->
+	
+	<destination id="libreria.frm_registro_admision_ingreso_registro">
+		<properties>
+			<source>libreria.frm_registro_admision_ingreso_registro</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_registro_admision_modifica_registro">
+		<properties>
+			<source>libreria.frm_registro_admision_modifica_registro</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_registro_admision_ingreso_inscripcion">
+		<properties>
+			<source>libreria.frm_registro_admision_ingreso_inscripcion</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_registro_admision_ver_inscripcion">
+		<properties>
+			<source>libreria.frm_registro_admision_ver_inscripcion</source>
+		</properties>
+	</destination>
+<!-- Librerias - > Carreras-FX - > Flex 3 -->
+
+	<destination id="libreria.frm_entidades">
+		<properties>
+			<source>libreria.frm_entidades</source>
+		</properties>
+	</destination>	
+
+
+ 	<destination id="libreria_alum.frm_MatriculasAlumno">
+		<properties>
+			<source>libreria_alum.frm_MatriculasAlumno</source>
+		</properties>
+	</destination>
+
+
+ 	<destination id="libreria_alum.frm_main_frame">
+		<properties>
+			<source>libreria_alum.frm_main_frame</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alum.des_encripta">
+		<properties>
+			<source>libreria_alum.des_encripta</source>
+		</properties>
+	</destination>	
+	
+<!-- Librerias - > Flex 1.5 Administracion - > Flex 3 -->	
+	<destination id="libreria.frm_adm_coloca_fecha_evaluaciones">
+		<properties>
+			<source>libreria.frm_adm_coloca_fecha_evaluaciones</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_adm_ingreso_encuesta">
+		<properties>
+			<source>libreria.frm_adm_ingreso_encuesta</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_adm_evaluacion_ejecucion_academica">
+		<properties>
+			<source>libreria.frm_adm_evaluacion_ejecucion_academica</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_adm_evaluaciones_includidas_promedio">
+		<properties>
+			<source>libreria.frm_adm_evaluaciones_includidas_promedio</source>
+		</properties>
+	</destination>
+	
+	
+	
+	<destination id="libreria.frm_adm_notas_muestra_historial">
+		<properties>
+			<source>libreria.frm_adm_notas_muestra_historial</source>
+		</properties>
+	</destination>
+	
+	
+	<destination id="libreria.frm_adm_parametros_cursos">
+		<properties>
+			<source>libreria.frm_adm_parametros_cursos</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_alumnos_main">
+		<properties>
+			<source>libreria.frm_alumnos_main</source>
+		</properties>
+	</destination>	
+	
+	<destination id="libreria_alm.frm_alumnos_main">
+		<properties>
+			<source>libreria_alm.frm_alumnos_main</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria_alm.frm_matriculas">
+		<properties>
+			<source>libreria_alm.frm_matriculas</source>
+		</properties>
+	</destination>
+	
+	
+	<destination id="libreria_alm.frm_mensaje_deuda">
+		<properties>
+			<source>libreria_alm.frm_mensaje_deuda</source>
+		</properties>
+	</destination>
+	
+	
+	<destination id="libreria_alm.frm_pop_seguridad">
+		<properties>
+			<source>libreria_alm.frm_pop_seguridad</source>
+		</properties>
+	</destination>
+	
+	
+	<destination id="libreria_alm.frm_mensajeria_alumno">
+		<properties>
+			<source>libreria_alm.frm_mensajeria_alumno</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria_alm.frm_pretoma_alumno">
+		<properties>
+			<source>libreria_alm.frm_pretoma_alumno</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria_alm.frm_notas">
+		<properties>
+			<source>libreria_alm.frm_notas</source>
+		</properties>
+	</destination>	
+	
+	<destination id="libreria_alm.frm_chat">
+		<properties>
+			<source>libreria_alm.frm_chat</source>
+		</properties>
+	</destination>
+	
+	
+	<destination id="libreria_alm.frm_despacho">
+		<properties>
+			<source>libreria_alm.frm_despacho</source>
+		</properties>
+	</destination>	
+	
+	<destination id="libreria_alm.frm_pagos">
+		<properties>
+			<source>libreria_alm.frm_pagos</source>
+		</properties>
+	</destination>	
+	
+	
+	<destination id="libreria.frm_adm_pregunta_frec_ingreso">
+		<properties>
+			<source>libreria.frm_adm_pregunta_frec_ingreso</source>
+		</properties>
+	</destination>	
+	
+	<destination id="libreria.frm_adm_asocia_pregunta_respuesta">
+		<properties>
+			<source>libreria.frm_adm_asocia_pregunta_respuesta</source>
+		</properties>
+	</destination>	
+	
+	<destination id="libreria_alm.frm_calendarios">
+		<properties>
+			<source>libreria_alm.frm_calendarios</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria_alm.frm_fuc_ingreso">
+		<properties>
+			<source>libreria_alm.frm_fuc_ingreso</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_fuc_muestra">
+		<properties>
+			<source>libreria_alm.frm_fuc_muestra</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_ver_encuesta">
+		<properties>
+			<source>libreria_alm.frm_ver_encuesta</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria_alm.frm_fuc_muestra_motivos">
+		<properties>
+			<source>libreria_alm.frm_fuc_muestra_motivos</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_bajada_pruebas">
+		<properties>
+			<source>libreria_alm.frm_bajada_pruebas</source>
+		</properties>
+	</destination>
+
+
+	<destination id="libreria_alm.frm_materiales_de_apoyo">
+		<properties>
+			<source>libreria_alm.frm_materiales_de_apoyo</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_foro_alumno">
+		<properties>
+			<source>libreria_alm.frm_foro_alumno</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria_alm.frm_pruebas_discrimina">
+		<properties>
+			<source>libreria_alm.frm_pruebas_discrimina</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_ficha_tutor">
+		<properties>
+			<source>libreria_alm.frm_ficha_tutor</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_prueba_rendir">
+		<properties>
+			<source>libreria_alm.frm_prueba_rendir</source>
+		</properties>
+	</destination>
+
+
+	<destination id="libreria_alm.frm_encuesta_contesta">
+		<properties>
+			<source>libreria_alm.frm_encuesta_contesta</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_comprobante_web">
+		<properties>
+			<source>libreria_alm.frm_comprobante_web</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_pruebas_objetiva_rendir">
+		<properties>
+			<source>libreria_alm.frm_pruebas_objetiva_rendir</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria_alm.frm_conferencias_alumno">
+		<properties>
+			<source>libreria_alm.frm_conferencias_alumno</source>
+		</properties>
+	</destination>	
+
+	
+	<destination id="bitacora.frm_identificacion">
+		<properties>
+			<source>bitacora.frm_identificacion</source>
+		</properties>
+	</destination>
+
+	<destination id="bitacora.frm_menu_principal">
+		<properties>
+			<source>bitacora.frm_menu_principal</source>
+		</properties>
+	</destination>	
+
+	<destination id="bitacora.frm_bitacora">
+		<properties>
+			<source>bitacora.frm_bitacora</source>
+		</properties>
+	</destination>	
+
+	<destination id="bitacora.frm_reserva_camioneta">
+		<properties>
+			<source>bitacora.frm_reserva_camioneta</source>
+		</properties>
+	</destination>	
+
+	<destination id="bitacora.frm_cambio_contrasenia">
+		<properties>
+			<source>bitacora.frm_cambio_contrasenia</source>
+		</properties>
+	</destination>	
+
+	<destination id="bitacora.frm_bitacora_informe">
+		<properties>
+			<source>bitacora.frm_bitacora_informe</source>
+		</properties>
+	</destination>	
+
+	<destination id="bitacora.frm_mantencion_vehiculo">
+		<properties>
+			<source>bitacora.frm_mantencion_vehiculo</source>
+		</properties>
+	</destination>	
+
+	<destination id="bitacora.frm_informatica_movimientos">
+		<properties>
+			<source>bitacora.frm_informatica_movimientos</source>
+		</properties>
+	</destination>
+	
+	<destination id="bitacora.frm_bitacora_rendimiento">
+		<properties>
+			<source>bitacora.frm_bitacora_rendimiento</source>
+		</properties>
+	</destination>		
+
+<!--	BITACORA	-->	
+
+<!--	IPLACEX		-->
+	
+	<destination id="iplacex.frm_alumno_identificador">
+		<properties>
+			<source>iplacex.frm_alumno_identificador</source>
+		</properties>
+
+	</destination>
+
+	<destination id="iplacex.frm_alumnos_principal">
+		<properties>
+			<source>iplacex.frm_alumnos_principal</source>
+		</properties>
+
+	</destination>
+
+	<destination id="iplacex.frm_alumno_agenda">
+		<properties>
+			<source>iplacex.frm_alumno_agenda</source>
+		</properties>
+
+	</destination>
+
+	<destination id="iplacex.frm_tutor_agenda">
+		<properties>
+			<source>iplacex.frm_tutor_agenda</source>
+		</properties>
+	</destination>
+
+	<destination id="iplacex.frm_tutor_noticias">
+		<properties>
+			<source>iplacex.frm_tutor_noticias</source>
+		</properties>
+	</destination>
+
+	<destination id="iplacex.frm_alumnos_noticias">
+		<properties>
+			<source>iplacex.frm_alumnos_noticias</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_glosario">
+		<properties>
+			<source>iplacex.frm_tutor_glosario</source>
+		</properties>
+	</destination>	
+	
+	<destination id="iplacex.frm_alumnos_glosario">
+		<properties>
+			<source>iplacex.frm_alumnos_glosario</source>
+		</properties>
+	</destination>	
+	
+	<destination id="iplacex.frm_alumnos_consultas_academicas">
+		<properties>
+			<source>iplacex.frm_alumnos_consultas_academicas</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_respuestas_academicas">
+		<properties>
+			<source>iplacex.frm_tutor_respuestas_academicas</source>
+		</properties>
+	</destination>			
+	
+	<destination id="iplacex.frm_tutor_ideas_fuerza">
+		<properties>
+			<source>iplacex.frm_tutor_ideas_fuerza</source>
+		</properties>
+	</destination>
+
+	<destination id="iplacex.frm_alumnos_ideas_fuerza">
+		<properties>
+			<source>iplacex.frm_alumnos_ideas_fuerza</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_link_interes_tema_relacionado">
+		<properties>
+			<source>iplacex.frm_tutor_link_interes_tema_relacionado</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_link_interes">
+		<properties>
+			<source>iplacex.frm_tutor_link_interes</source>
+		</properties>
+	</destination>						
+	
+	<destination id="iplacex.frm_alumnos_link_interes">
+		<properties>
+			<source>iplacex.frm_alumnos_link_interes</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_alumnos_link_interes_sugiere">
+		<properties>
+			<source>iplacex.frm_alumnos_link_interes_sugiere</source>
+		</properties>
+	</destination>		
+		
+	<destination id="iplacex.frm_tutor_link_interes_sugerencias">
+
+		<properties>
+			<source>iplacex.frm_tutor_link_interes_sugerencias</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_identificacion">
+		<properties>
+			<source>iplacex.frm_tutor_identificacion</source>
+		</properties>
+	</destination>
+
+	<destination id="iplacex.frm_tutor_principal">
+		<properties>
+			<source>iplacex.frm_tutor_principal</source>
+		</properties>
+	</destination>			
+	
+	<destination id="iplacex.frm_alumnos_material_de_estudio">
+		<properties>
+			<source>iplacex.frm_alumnos_material_de_estudio</source>
+		</properties>
+	</destination>		
+	
+	<destination id="iplacex.frm_alumnos_workshop">
+		<properties>
+			<source>iplacex.frm_alumnos_workshop</source>
+		</properties>
+	</destination>			
+	
+	<destination id="iplacex.frm_alumnos_mis_apuntes">
+		<properties>
+			<source>iplacex.frm_alumnos_mis_apuntes</source>
+		</properties>
+	</destination>
+
+	<destination id="iplacex.frm_alumnos_apuntes_compartidos">
+		<properties>
+			<source>iplacex.frm_alumnos_apuntes_compartidos</source>
+		</properties>
+	</destination>				
+		
+<!--	FMEDINA		-->						
+	
+	<destination id="iplacex.frm_tutor_portafolio_evidencia">
+		<properties>
+			<source>iplacex.frm_tutor_portafolio_evidencia</source>
+		</properties>
+	</destination>	
+
+        <destination id="UploadCapturaExamen-ro">
+		<properties>
+			<source>org.flex.flexpaint.UploadCapturaExamen</source>
+		</properties>
+	</destination>
+
+	<destination id="gmfx.frm_personas_ingreso">
+		<properties>
+			<source>gmfx.frm_personas_ingreso</source>
+		</properties>
+	</destination>
+
+	<destination id="gmfx.frm_examenes_ingresa">
+		<properties>
+			<source>gmfx.frm_examenes_ingresa</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_portafolio_evidencia_lista">
+		<properties>
+			<source>iplacex.frm_tutor_portafolio_evidencia_lista</source>
+		</properties>
+	</destination>	
+	
+	<destination id="iplacex.frm_alumnos_portafolio_evidencia_agrega_e">
+		<properties>
+			<source>iplacex.frm_alumnos_portafolio_evidencia_agrega_e</source>
+		</properties>
+	</destination>	
+	
+	<destination id="iplacex.frm_tutor_videoclase_on">
+		<properties>
+			<source>iplacex.frm_tutor_videoclase_on</source>
+		</properties>
+	</destination>	
+	
+	<destination id="iplacex.frm_alumnos_videoclase_on">
+		<properties>
+			<source>iplacex.frm_alumnos_videoclase_on</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_sala_debates_crea">
+		<properties>
+			<source>iplacex.frm_tutor_sala_debates_crea</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_alumnos_sala_debate">
+		<properties>
+			<source>iplacex.frm_alumnos_sala_debate</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_sala_debates_lista">
+		<properties>
+			<source>iplacex.frm_tutor_sala_debates_lista</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_video_clase">
+		<properties>
+			<source>iplacex.frm_tutor_video_clase</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_alumnos_video_clase">
+		<properties>
+			<source>iplacex.frm_alumnos_video_clase</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_alumnos_apoyo_visual">
+		<properties>
+			<source>iplacex.frm_alumnos_apoyo_visual</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_apoyo_visual">
+		<properties>
+			<source>iplacex.frm_tutor_apoyo_visual</source>
+		</properties>
+	</destination>
+	
+	<destination id="iplacex.frm_tutor_prueba">
+		<properties>
+			<source>iplacex.frm_tutor_prueba</source>
+		</properties>
+	</destination>
+	
+	<destination id="libreria.frm_certificados_alumnos">
+		<properties>
+			<source>libreria.frm_certificados_alumnos</source>
+		</properties>
+	</destination>
+
+	<destination id="libreria.frm_adm_emicion_boletas_masivas_recaudadoras">
+		<properties>
+			<source>libreria.frm_adm_emicion_boletas_masivas_recaudadoras</source>
+		</properties>
+	</destination>
+</service>

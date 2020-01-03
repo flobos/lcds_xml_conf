@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="data-service" 
+    class="flex.data.DataService">
+
+    <adapters>
+        <adapter-definition id="actionscript" class="flex.data.adapters.ASObjectAdapter" default="true"/>
+        <adapter-definition id="java-dao" class="flex.data.adapters.JavaAdapter"/>
+    </adapters>
+	
+	<default-channels>
+        <channel ref="my-rtmp"/>
+    </default-channels>
+	
+	 <destination id="fdms-conferencia">
+		<adapter ref="java-dao" />
+		<properties>
+
+			<source>libreria_alm.ConferenciaAssembler</source>
+			<scope>session</scope>
+			<metadata>
+				<identity property="campo_uno"/>
+			</metadata>
+		</properties>
+	</destination>
+	
+
+</service>
